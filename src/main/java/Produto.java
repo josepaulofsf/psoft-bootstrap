@@ -1,36 +1,38 @@
 public class Produto {
-    private int codigo;
-    private String nome;
-    private double valorU;
+    private int id;
+    private String descricao;
+    private String status;
     
-    public Produto(int codigo, String nome, double valorU) {
-        this.codigo = codigo;
-        this.nome = nome;
-        this.valorU = valorU;
+    public Produto(int id, String descricao) {
+        this.id = id;
+        this.descricao = descricao;
+        this.status = "iniciado";
     }
 
-    public int getCodigo() {
-        return codigo;
+    public int getId() {
+        return id;
     }
 
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
-    public double getValorU() {
-        return valorU;
+    public void setStatus(String status){
+        this.status = status;
     }
 
-    public void setValorU(double valorU) {
-        this.valorU = valorU;
+    @Override
+    public String toString() {
+        return this.id + " - " + this.status;
     }
 
+    
 }
